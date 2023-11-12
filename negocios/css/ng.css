@@ -1,0 +1,114 @@
+	body,
+	html {
+		margin:0;
+		padding:0;
+		color:#000;
+		background:#a7a09a;
+	}
+	#wrap {
+		width:800px;
+		margin:0 auto;
+		background:#99c;
+	}
+	#header {
+    	padding:1px 1px;
+		background:#8FBC8F;
+	}
+	h1 {
+	    margin:0;
+    }
+	#nav {
+		padding:5px 10px;
+		background:#F0FFFF;
+	}
+	#nav ul {
+		margin:0;
+		padding:0;
+		list-style:none;
+	}
+	#nav li {
+		display:inline;
+		margin:0;
+		padding:0;
+	}
+	#main3 {
+		float:right;
+		width:610px;
+		padding:1px;
+		background:white;
+	}
+	h2 {
+		margin:0 0 1em;
+	}
+	#sidebar {
+		float:left;
+		width:188px;	
+		background:white;
+		margin:0 0px 0 0;
+	}
+	#footer {
+		clear:both;
+		padding:5px 10px;
+		background:#cc9;
+	}
+	#footer p {
+		margin:0;
+    }
+	* html #footer {
+		height:1px;
+	}
+
+	A {
+		COLOR: darkblue; TEXT-DECORATION: none
+	}
+	A:hover {
+		COLOR: #008000; TEXT-DECORATION: none size; FONT-SIZE: 11px
+	}
+	A:visited {
+		COLOR: #8772EB
+	}
+	
+	.paginacao a{color:#333; padding:3px 5px; border:1px solid #ccc; text-decoration:none; margin:0 3px;}
+
+	.paginacao a:hover{background:#333; color:#fff;}
+
+	.paginacao a.atual{font-weight:bold; background:#fff; color:#333; border:0; border-bottom:1px solid #ccc; font-size:1.3em;}
+
+
+
+
+
+			/*
+			    News
+			*/
+			#mask {
+			  position:absolute;
+			  left:0;
+			  top:0;
+			  z-index:9000;
+			  background-color:#000;
+			  display:none;
+			}
+
+			#boxes .window {
+			  position:absolute;
+			  background-color:white;
+			  left:10;
+			  top:5;
+			  width:540px;
+			  height:400px;
+			  display:none;
+			  z-index:9999;
+			  padding:600px;
+			}
+			
+			#boxes #dialog2 {   
+			  width:681px;
+			  height:329px;
+			  padding:50px 9px 5px 30px;
+			}
+			
+			.close{display:block; text-align:right;}
+
+			.ann{display:block; text-align:right;}
+			

@@ -1,0 +1,145 @@
+BODY {
+	SCROLLBAR-FACE-COLOR: #ffffff; SCROLLBAR-HIGHLIGHT-COLOR: #9c9c9c; SCROLLBAR-SHADOW-COLOR: #9c9c9c; SCROLLBAR-3DLIGHT-COLOR: #ffffff; SCROLLBAR-ARROW-COLOR: #9c9c9c; SCROLLBAR-TRACK-COLOR: #ffffff; SCROLLBAR-DARKSHADOW-COLOR: #ffffff; BACKGROUND-COLOR: white
+}
+.subtitulo {
+	FONT-WEIGHT: bold; FONT-SIZE: 18px; COLOR: #3f691f; FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif; TEXT-DECORATION: none
+}
+.subtitulo3 {
+	FONT-WEIGHT: bold; FONT-SIZE: 13px; COLOR: #375e2b; FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif; TEXT-DECORATION: none
+}
+.tituloAdv {
+	FONT-WEIGHT: bold; FONT-SIZE: 16px; COLOR: #3f691f; FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif; TEXT-DECORATION: none
+}
+.msgSystem {
+	FONT-WEIGHT: bold; FONT-SIZE: 11px; COLOR: darkblue; FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif; TEXT-DECORATION: none
+}
+.msgAlert {
+	FONT-WEIGHT: normal; FONT-SIZE: 11px; COLOR: darkred; FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif; TEXT-DECORATION: none
+}
+.labels {
+	FONT-WEIGHT: normal; FONT-SIZE: 9px; COLOR: black; FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif; TEXT-DECORATION: none
+}
+TD {
+	FONT-SIZE: 10px; COLOR: #666666; FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif
+}
+A {
+	COLOR: darkblue; TEXT-DECORATION: none
+}
+A:hover {
+	COLOR: #008000; TEXT-DECORATION: none size; FONT-SIZE: 11px
+}
+A:visited {
+	COLOR: #8772EB
+}
+
+.linkquadros {
+	FONT-WEIGHT: normal; FONT-SIZE: 10px; COLOR: #ff0000; FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif; TEXT-DECORATION: none
+}
+.fundo-vermelha1 {
+	BACKGROUND-COLOR: #ff0000
+}
+.inputtexto {
+	BORDER-RIGHT: #9c9c9c 1px solid; BORDER-TOP: #9c9c9c 1px solid; FONT-SIZE: 10px; VERTICAL-ALIGN: middle; BORDER-LEFT: #9c9c9c 1px solid; WIDTH: 127px; COLOR: #666666; BORDER-BOTTOM: #9c9c9c 1px solid; FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif; HEIGHT: 18px; BACKGROUND-COLOR: #ffffff; TEXT-ALIGN: left; TEXT-DECORATION: none
+}
+P {
+	MARGIN: 0in 0in 0pt
+}
+TD.gray {
+	FONT-WEIGHT: normal; FONT-SIZE: 9px; COLOR: #ff0000; FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif; BACKGROUND-COLOR: #efefef; TEXT-DECORATION: none
+}
+TD.cinza A {
+	COLOR: #ff0000; TEXT-DECORATION: none
+}
+.ashblack {
+	COLOR: #cccccc; BACKGROUND-COLOR: #cccccc
+}
+
+font.colunistas {
+    font-family: Trebuchet, Verdana, Helvetica, sans-serif;  color: black;   font-size: 9pt; 
+}
+
+
+
+.divAbsolute {
+
+	WIDTH: 410px;
+    HEIGHT: 200px;
+	position: absolute;
+	background: #F2FEE7;
+	border: 1px #000066 solid;
+	left: 50%;
+	top: 5%;
+	margin-left: -150px;
+	margin-top: -45px;
+	display: auto;
+	z-index: 100;
+	padding: 0 !important;
+}
+
+
+
+.paginacao a{color:#333; padding:3px 5px; border:1px solid #ccc; text-decoration:none; margin:0 3px;}
+
+.paginacao a:hover{background:#333; color:#fff;}
+
+.paginacao a.atual{font-weight:bold; background:#fff; color:#333; border:0; border-bottom:1px solid #ccc; font-size:1.3em;}
+
+
+.tableMsg {
+	width: 97%;
+	border: 1px solid #CCCCCC;
+	margin: 5px 0px 5px 10px;
+	background-color: #FFFFE6;
+	text-align: center;
+}
+
+
+.tableMsgIntern {
+	padding: 0px 2px 0px 2px;
+	text-align: center;
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 11px;
+	color: #666666
+}
+
+
+/*
+			    News
+			*/
+			body {
+				font-family:verdana;
+				font-size:15px;
+			}
+			#mask {
+			  position:absolute;
+			  left:0;
+			  top:0;
+			  z-index:9000;
+			  background-color:#000;
+			  display:none;
+			}
+
+			#boxes .window {
+			  position:absolute;
+			  background-color:white;
+			  left:10;
+			  top:5;
+			  width:540px;
+			  height:400px;
+			  display:none;
+			  z-index:9999;
+			  padding:600px;
+			}
+			
+			#boxes #dialog2 {   
+			  width:681px;
+			  height:329px;
+			  padding:50px 9px 5px 30px;
+			}
+			
+			.close{display:block; text-align:right;}
+
+			.ann{display:block; text-align:right;}
+			
+
+

@@ -1,0 +1,55 @@
+<?
+
+$text = "
+
+
+2011 vem chegando, e com ele novas oportunidades de fazer grandes e lucrativos negocios.
+
+
+NegociosLucrativos.com vem trabalhando para se tornar uma eficiente ferramenta para você
+consultar, encontrar e fazer  ótimos negócios.
+
+
+Para o ano de 2011, teremos uma versão do site em inglês, e mensalmente enviaremos uma 
+newsletters divulgando  as mais recentes propostas de negócios anunciadas no site
+NegociosLucrativos.com
+
+
+Gostariamos que você nos ajudasse, respondendo o questionário que estamos lhe enviando.
+Lembrando que a  sua opinião é muito  importante para nós, e servirá como base para 
+aperfeiçoar  o serviço do site.
+
+
+Para responder o questionário por favor, clique no link
+abaixo
+<A href=http://www.negocioslucrativos.com/news/quest.php?id=idUser>
+http://www.negocioslucrativos.com/news/quest.php?id=idUser
+
+</a>
+
+
+Muito obrigado pela atenção
+
+
+Painel de oportunidades de negócios 07/2010
+http://www.negocioslucrativos.com/news/op.php?m=9&y=2010
+
+";
+
+
+
+echo putId($text,5);
+
+function putId($text,$id)
+{
+//	$pos = strpos($text,"idUser") ;
+//	return substr( $text,0, $pos ).$id.substr( $text, $pos+6, strlen($text) ) ;
+
+
+return	eregi_replace("idUser", "$id", $text);
+
+}
+
+
+
+?>

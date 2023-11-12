@@ -1,0 +1,24 @@
+
+
+
+a.botonMenu {
+font-family: sans-serif, Verdana, Arial;
+cursor: pointer;
+text-decoration: none;
+COLOR: darkgreen;
+}
+
+ a.botonMenu:hover {
+font-family: sans-serif, Verdana, Arial;
+color: darkgreen;
+background-color: #F4FDF4;
+
+}
+
+a.botonMenu:active {
+color: darkgreen;
+}
+
+A:visited {
+		COLOR: black;
+	}

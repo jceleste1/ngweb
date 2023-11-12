@@ -1,0 +1,118 @@
+BODY {
+	background : #C0D9D9 url(images/fondo.gif) repeat;
+	font : 8pt Verdana, Geneva, Arial, Helvetica, sans-serif;
+	color : black;
+	margin : 20px 0px 20px 0px;
+	padding : 0px;
+	text-align: center;
+}
+#contenedor{
+	text-align: left;
+	width: 700px;
+	background-color : #ffffff;
+	margin: auto;
+}
+#cabecera{
+	height : 106px;
+	width: 700px;
+}
+#navegador{
+	background : #F5F4C3 url(images/fondonav.gif);
+	padding : 3px 10px 5px 10px;
+	border-top : 1px solid #cccccc;
+	border-bottom : 1px solid #cccccc;
+}
+#cuerpo{
+	float:left;
+	width:490px;
+	margin-left: 8px;
+	padding: 1px 0px 1px 0px;
+	background-color : #ffffff;
+}
+#navabajo{
+	font-weight : bold;
+}
+H1{
+	font-size: 12pt;
+}
+}
+INPUT {
+	font-size : 8pt;
+}
+#lateral{
+	width: 200px;
+	float:right;
+	background-color: #EBF2FE;
+	border-bottom : 1px solid #cccccc;
+	border-left : 1px solid #cccccc;
+}
+#otras ul{
+	margin : 5px 10px 0px 0px;
+	list-style: none;
+	padding: 0px 0px 0px 4px;
+}
+#otras li{
+	padding-left: 14px; 
+	background: transparent url("images/bullet.gif") 0 2px no-repeat;
+	margin-bottom: 10px;	
+}
+.titlat{
+	background-color:#68729E;
+	color:#ffffff;
+	font-size:8pt;
+	text-transform : uppercase;
+	padding: 7px 3px 7px 8px;
+	margin: 0px 0px 8px 0px;
+	font-weight : normal;
+	letter-spacing : 2px;
+}
+
+.text{
+	color:darkblue;
+	font-size:10pt;
+	font-weight : normal;	
+}
+
+
+.cuerpolateral{
+	padding: 5px 4px 13px 10px;
+}
+
+#campotexto{
+	float: left;
+}
+#campotexto input{
+	width:100px;
+}
+#fbuscar form{
+	margin-bottom : 0px;
+	margin-top : 0px;
+}
+#botonbuscar {
+	padding-top : 3px;
+	padding-left: 106px;
+}
+#botonbuscar input{
+	border : 0px none;
+}
+.radio{
+	clear:both;
+}
+
+
+font.material {
+    font-family: Trebuchet, Arial, Helvetica, sans-serif; font-size: 11px; 
+}
+
+font.colunistas {
+    font-family: Trebuchet, Verdana, Helvetica, sans-serif;  color: black;   font-size: 10pt; 
+}
+
+input[type=submit] {
+    padding:5px 15px; 
+    background:#ccc; 
+    border:0 none;
+    cursor:pointer;
+    -webkit-border-radius: 5px;
+    border-radius: 5px; 
+}
