@@ -22,7 +22,7 @@
 	
 
 	if( ! $conexao ) {
-		$conexao =  mysql_connect( $RDS_URL, $RDS_user,$RDS_pwd);
+		$conexao =  mysqli_connect( $RDS_URL, $RDS_user,$RDS_pwd);
 	}
 		
 	require_once "ismobile/ismobile.class.php";

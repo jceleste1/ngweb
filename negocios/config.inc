@@ -9,16 +9,16 @@ include("properties.php");
 $aMarketing[1] ="Links patrocinados do Google";
 $aMarketing[2] ="Links patrocinados do Yahoo";
 $aMarketing[3] ="Sebrae classificados";
-$aMarketing[4] ="Classificados Estado de São Paulo";
-$aMarketing[5] ="Classificados Folha de São Paulo";
+$aMarketing[4] ="Classificados Estado de Sï¿½o Paulo";
+$aMarketing[5] ="Classificados Folha de Sï¿½o Paulo";
 $aMarketing[6] ="E-mail marketing";
 $aMarketing[7] ="Outros";
 
 
 
 $aEmpresa[1]="Ind&uacute;stria";
-$aEmpresa[2]="Comércio";
-$aEmpresa[3]="Serviço";
+$aEmpresa[2]="Comï¿½rcio";
+$aEmpresa[3]="Serviï¿½o";
 
 
 
@@ -35,44 +35,29 @@ $conexao = "";
 #
 function fMySQL_Connect($qry,$DB="",$sendMail=true){
 
- Global $conexao ;
- Global $RDS_URL;
- Global $RDS_user;
- Global $RDS_pwd;
- 
-
- if( ! $conexao ) {
-         $conexao =  mysql_connect( $RDS_URL, $RDS_user, $RDS_pwd);
-
-         if(  mysql_error() ) {
-	         echo  mysql_error() ; 
-             $msg = "ERRO NO BANCO DE DADOS" + NMDATABASE;
-			 if( $sendMail ) {
-				echo "Erro na conexão  "+ mysql_error() ;
-                //   exit;
-			}
-         }
-
-  }
-
-         
-
-  $DB = "negocioslu_db";
+	Global $conexao ;
+	Global $RDS_URL;
+	Global $RDS_user;
+	Global $RDS_pwd;
+	$DB = "ngweb";
   
+	$conn = mysqli_connect( $RDS_URL,$RDS_user,$RDS_pwd, $DB ); 
+
+	if( mysqli_connect_error() ){
+		echo "Error  " .mysqli_connect_error();
+	}
 
   
-  
-  $result = mysql( $DB , $qry );
-  if( mysql_error() ){
-    	
-             $msg = "ERRO NA QUERY BRASIL FORTE\n\n $qry " ;
-			 if( $sendMail ){
-				echo  $qry . " <br> ".mysql_error(). "<br>";
-			}
-             
-  }
+	$result = mysqli_query($conn, $qry );
 
-  return $result;
+	if( mysqli_connect_error() ){
+		echo  mysqli_connect_error();
+
+		$msg = "ERRO NA QUERY BRASIL FORTE\n\n $qry " ;
+		echo  $qry . " <br> ".mysql_error(). "<br>";
+		    
+	}
+	return $result;
 }
 
 #
@@ -92,7 +77,7 @@ function fMySQL_Connect($qry,$DB="",$sendMail=true){
 $aMonths = Array();
 $aMonths[1] = 'Janeiro';
 $aMonths[2] = 'Fevereiro';
-$aMonths[3] = 'Março';
+$aMonths[3] = 'Marï¿½o';
 $aMonths[4] = 'Abril';
 $aMonths[5] = 'Maio';
 $aMonths[6] = 'Junho';
