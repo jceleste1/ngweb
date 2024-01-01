@@ -33,6 +33,19 @@ pipeline {
         }
 		
 		
+		stage ('Down Docker Image'){
+            environment {
+                tag_version = "${env.BUILD_ID}"
+            }
+            steps{
+		     	script {
+                    sh '/root/ngweb-compose/docker-compose down'
+				}
+			}
+           
+        }
+		
+		docker-compose down
 
     }
 
