@@ -45,8 +45,6 @@ pipeline {
            
         }
 		
-		docker-compose down
-
     }
 
 }
