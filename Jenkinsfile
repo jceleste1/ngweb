@@ -39,7 +39,7 @@ pipeline {
             }
             steps{
 		     	script {
-                    sh '\root\ngweb-compose\docker-compose down'
+                    sh 'docker-compose rm -s -v ngweb-compose_ngweb_1'
 				}
 			}
            
