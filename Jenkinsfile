@@ -20,7 +20,7 @@ pipeline {
             }
         }
 		
-		stage ('Deploy dcoker'){
+		stage ('Pull Docker Image'){
             environment {
                 tag_version = "${env.BUILD_ID}"
             }
@@ -31,6 +31,8 @@ pipeline {
 			}
            
         }
+		
+		
 
     }
 
