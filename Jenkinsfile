@@ -25,19 +25,12 @@ pipeline {
                 tag_version = "${env.BUILD_ID}"
             }
             steps{
+		     	script {
                     sh 'docker pull  jceleste/ngweb:latest'
-                }
-            }
+				}
+			}
+           
         }
-
-
-		
-		
-		
-		
-		
-		
-		
 
     }
 
