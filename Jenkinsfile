@@ -39,7 +39,7 @@ pipeline {
             }
             steps{
 		     	script {
-                    sh 'cd /home/ngweb-compose'
+                    sh 'cd /root/ngweb-compose'
 				}
 			
 			
