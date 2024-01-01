@@ -14,12 +14,30 @@ pipeline {
             steps {
                 script {
                     docker.withRegistry('https://registry.hub.docker.com','dockerhub'){
-                        dockerapp.push('latest')
                         dockerapp.push("${env.BUILD_ID}")
                     }
                 }
             }
         }
+		
+		stage ('Deploy dcoker'){
+            environment {
+                tag_version = "${env.BUILD_ID}"
+            }
+            steps{
+                    sh 'docker pull  jceleste/ngweb:"/$tag_version"
+                }
+            }
+        }
+
+
+		
+		
+		
+		
+		
+		
+		
 
     }
 
