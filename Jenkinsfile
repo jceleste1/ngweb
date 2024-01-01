@@ -39,7 +39,7 @@ pipeline {
             }
             steps{
 		     	script {
-                    sh '//root//ngweb-compose//docker-compose down'
+                    sh '\root\ngweb-compose\docker-compose down'
 				}
 			}
            
