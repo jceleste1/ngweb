@@ -6,7 +6,7 @@ pipeline {
          stage ('Build Docker Image'){
              steps{
                  script {
-                     dockerapp = docker.build("jceleste/ngweb:${env.BUILD_ID}", '-f ./Dockerfile ./ ')
+                     dockerapp = docker.build("jceleste/ngweb:latest", '-f ./Dockerfile ./ ')
                 }
              } 
 		}	
@@ -14,7 +14,7 @@ pipeline {
             steps {
                 script {
                     docker.withRegistry('https://registry.hub.docker.com','dockerhub'){
-                        dockerapp.push("${env.BUILD_ID}")
+                        dockerapp.push("latest")
                     }
                 }
             }
@@ -25,7 +25,7 @@ pipeline {
                 tag_version = "${env.BUILD_ID}"
             }
             steps{
-                    sh 'docker pull  jceleste/ngweb:"/$tag_version"
+                    sh 'docker pull  jceleste/ngweb:latest'
                 }
             }
         }
