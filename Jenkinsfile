@@ -39,7 +39,7 @@ pipeline {
             }
             steps{
 		     	script {
-                    sh 'docker-compose rm -s -v ngweb-compose_ngweb_1'
+                    sh 'docker-compose stop ngweb-compose_ngweb_1'
 				}
 			}
            
