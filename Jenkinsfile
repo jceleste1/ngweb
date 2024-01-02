@@ -44,7 +44,9 @@ pipeline {
 		     	script {
                     sh 'docker-compose stop'
 				}
-				
+				script {
+                    sh 'docker-compose up'
+				}
 			}
            
         }
