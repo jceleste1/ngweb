@@ -12,6 +12,7 @@ pipeline {
          stage ('Build Docker Image'){
              steps{
                  script {
+				       sh 'docker system prune -a'
                      dockerapp = docker.build("jceleste/ngweb:${env.BUILD_ID}", '-f ./Dockerfile ./ ')
 					 
                 }
@@ -35,7 +36,7 @@ pipeline {
             }
             steps{
 		     	script {
-                  
+              
 					
 					sh 'sed -i "s/{{TAG}}/$tag_version/g" /home/ngweb-compose/docker-compose.yaml'
                     sh 'docker-compose build'
