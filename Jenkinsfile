@@ -6,7 +6,7 @@ pipeline {
          stage ('Build Docker Image'){
              steps{
                  script {
-                     dockerapp = docker.build("jceleste/ngweb:latest", '-f ./Dockerfile ./ ')
+                     dockerapp = docker.build("jceleste/ngweb:${env.BUILD_ID}", '-f ./Dockerfile ./ ')
                 }
              } 
 		}	
@@ -14,23 +14,12 @@ pipeline {
             steps {
                 script {
                     docker.withRegistry('https://registry.hub.docker.com','dockerhub'){
-                        dockerapp.push("latest")
+                    dockerapp.push("${env.BUILD_ID}")
                     }
                 }
             }
         }
 		
-		stage ('Pull Docker Image'){
-            environment {
-                tag_version = "${env.BUILD_ID}"
-            }
-            steps{
-		     	script {
-                    sh 'docker pull  jceleste/ngweb:latest'
-				}
-			}
-           
-        }
 		
 		
 		stage ('Down Docker Image'){
@@ -40,10 +29,12 @@ pipeline {
             steps{
 		     	script {
                     sh 'cd /home/ngweb-compose'
-				}
-				script {
-                 
+					
+					 sh 'docker rmi  jceleste/ngweb:${env.BUILD_ID}'
+					
 					sh 'docker-compose up'
+
+
 				}
 				
 			}
