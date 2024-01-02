@@ -41,10 +41,11 @@ pipeline {
 		     	script {
                     sh 'cd /home/ngweb-compose'
 				}
-			
-			
 		     	script {
                     sh 'docker-compose stop'
+				}
+				script {
+                    sh 'docker-compose start'
 				}
 			}
            
