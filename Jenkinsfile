@@ -40,6 +40,8 @@ pipeline {
 					
 					sh 'sed -i "s/{{TAG}}/$tag_version/g" /home/ngweb-compose/docker-compose.yaml'
                     sh 'docker-compose build'
+					sh 'docker-compose up'
+
 
 				}
 				
