@@ -42,7 +42,7 @@ pipeline {
                     sh 'cd /home/ngweb-compose'
 				}
 		     	script {
-                    sh 'sudo docker-compose stop'
+                    sh 'docker-compose stop'
 				}
 				
 			}
@@ -58,7 +58,7 @@ pipeline {
                     sh 'cd /home/ngweb-compose'
 				}
 				script {
-                    sh 'sudo docker-compose up'
+                    sh 'docker-compose up'
 				}
 			}
            
