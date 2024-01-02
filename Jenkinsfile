@@ -41,7 +41,7 @@ pipeline {
 					sh 'sed -i "s/{{TAG}}/$tag_version/g" /home/ngweb-compose/docker-compose.yaml'
                     sh 'docker-compose build'
 					
- sh 'docker compose start jceleste/ngweb:"${env.BUILD_ID}"'
+ sh 'docker compose start jceleste/ngweb:"$tag_version"'
 
 				}
 				
