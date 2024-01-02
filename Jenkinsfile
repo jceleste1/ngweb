@@ -30,7 +30,7 @@ pipeline {
 		     	script {
                     sh 'cd /home/ngweb-compose'
 					
-					 sh 'docker rmi  jceleste/ngweb:'${env.BUILD_ID}
+					 sh "docker rmi  jceleste/ngweb:${env.BUILD_ID}"
 					
 					sh 'docker-compose up'
 
