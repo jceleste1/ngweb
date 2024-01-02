@@ -36,7 +36,7 @@ pipeline {
             }
             steps{
 		     	script {
-                    sh 'cd /home/ngweb-compose'
+                  
 					
 					sh 'sed -i "s/{{TAG}}/$tag_version/g" /home/ngweb-compose/docker-compose.yaml'
                     sh 'docker-compose up'
