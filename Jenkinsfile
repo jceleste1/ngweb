@@ -1,12 +1,19 @@
 pipeline {
     agent any
+	
+	environment { 
+        registry = "jceleste/ngweb" 
+
+        dockerImage = '' 
+    }
 
 
     stages {
          stage ('Build Docker Image'){
              steps{
                  script {
-                     dockerapp = docker.build("jceleste/ngweb:${env.BUILD_ID}", '-f ./Dockerfile ./ ')
+                     dockerImage = docker.build("jceleste/ngweb:${env.BUILD_ID}", '-f ./Dockerfile ./ ')
+					 
                 }
              } 
 		}	
@@ -14,7 +21,7 @@ pipeline {
             steps {
                 script {
                     docker.withRegistry('https://registry.hub.docker.com','dockerhub'){
-                    dockerapp.push("${env.BUILD_ID}")
+                    dockerapp.push("jceleste/ngweb:${env.BUILD_ID}")
                     }
                 }
             }
@@ -29,8 +36,6 @@ pipeline {
             steps{
 		     	script {
                     sh 'cd /home/ngweb-compose'
-					
-					 sh "docker rmi  jceleste/ngweb:${env.BUILD_ID}"
 					
 					sh 'docker-compose up'
 
