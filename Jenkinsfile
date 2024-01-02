@@ -43,26 +43,14 @@ pipeline {
 				}
 		     	script {
                     sh 'docker-compose stop'
+					sh 'sudo docker-compose up'
 				}
 				
 			}
            
         }
 		
-		stage ('Up Docker Image'){
-            environment {
-                tag_version = "${env.BUILD_ID}"
-            }
-            steps{
-		     	script {
-                    sh 'cd /home/ngweb-compose'
-				}
-				script {
-                    sh 'sudo docker-compose up'
-				}
-			}
-           
-        }
+		
 		
     }
 
