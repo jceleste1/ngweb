@@ -58,7 +58,7 @@ pipeline {
                     sh 'cd /home/ngweb-compose'
 				}
 				script {
-                    sh 'docker-compose up'
+                    sh 'sudo docker-compose up'
 				}
 			}
            
