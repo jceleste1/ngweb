@@ -43,6 +43,10 @@ pipeline {
 				}
 		     	script {
                     sh 'docker-compose stop'
+				
+				}
+				script {
+                 
 					sh 'sudo docker-compose up'
 				}
 				
