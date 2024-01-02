@@ -29,16 +29,14 @@ pipeline {
 		
 		
 		
-		stage ('Down Docker Image'){
+		stage ('Publish Docker Image'){
             environment {
                 tag_version = "${env.BUILD_ID}"
             }
             steps{
 		     	script {
                     sh 'cd /home/ngweb-compose'
-					
 					sh 'docker-compose up'
-
 
 				}
 				
