@@ -21,7 +21,9 @@ pipeline {
             steps {
                 script {
                     docker.withRegistry('https://registry.hub.docker.com','dockerhub'){
-                     dockerapp.push("${env.BUILD_ID}")
+                     dockerapp.push("${env.BUILD_ID}")7
+					 
+					
                     }
                 }
             }
@@ -29,7 +31,7 @@ pipeline {
 		
 		
 		
-		stage ('Publish Docker Image'){
+		stage ('Build Docker Image'){
             environment {
                 tag_version = "${env.BUILD_ID}"
             }
@@ -43,7 +45,7 @@ pipeline {
  
  					sh 'sed -i "s/$tag_version/{{TAG}}/g" /home/ngweb-compose/docker-compose.yaml'
  
-sh 'docker-compose up'
+
 				}
 				
 			}
