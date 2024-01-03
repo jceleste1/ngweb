@@ -21,8 +21,8 @@ pipeline {
             steps {
                 script {
 					 
-					 sh 'docker push  /jceleste/ngweb:'${env.BUILD_ID}
-                    }
+					 sh 'docker push  /jceleste/ngweb:"${env.BUILD_ID}"'
+                    
                 }
             }
         }
