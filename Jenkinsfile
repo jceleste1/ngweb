@@ -20,8 +20,8 @@ pipeline {
 		stage ('Push Docker Image'){
             steps {
                 script {
-                    docker.withRegistry('https://registry.hub.docker.com','dockerhub'){
-                     dockerapp.push("jceleste/ngweb:${env.BUILD_ID}")7
+                    docker.withRegistry('https://registry.hub.docker.com/jceleste/ngweb','dockerhub'){
+                     dockerapp.push("${env.BUILD_ID}")
 					 
 					
                     }
