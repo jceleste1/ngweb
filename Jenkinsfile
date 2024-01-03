@@ -31,20 +31,17 @@ pipeline {
 		
 		
 		
-		stage ('Build Docker Image'){
+		stage ('Deploy Docker Image'){
             environment {
                 tag_version = "${env.BUILD_ID}"
             }
             steps{
 		     	script {
-              
 					
 					sh 'sed -i "s/{{TAG}}/$tag_version/g" /home/ngweb-compose/docker-compose.yaml'
                     sh 'docker-compose build'
-					
  
  					sh 'sed -i "s/$tag_version/{{TAG}}/g" /home/ngweb-compose/docker-compose.yaml'
- 
 
 				}
 				
