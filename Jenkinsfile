@@ -17,16 +17,7 @@ pipeline {
                 }
              } 
 		}	
-		stage ('Push Docker Image'){
-            steps {
-                script {
-                    docker.withRegistry('https://registry.hub.docker.com/','dockerhub'){
-                     dockerapp.push("${env.BUILD_ID}")
-					
-                    }
-                }
-            }
-        }
+		
 		
 		
 		
@@ -38,9 +29,8 @@ pipeline {
 		     	script {
 					
 					sh 'sed -i "s/{{TAG}}/$tag_version/g" /home/ngweb-compose/docker-compose.yaml'
-                    sh 'docker-compose build'
+                    sh 'docker-compose up'
 					
-					 sh 'docker-compose start'
  
 				}
 				
