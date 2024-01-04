@@ -25,7 +25,6 @@ pipeline {
                     
 					 
 					  sh 'docker push jceleste/ngweb:$tag_version'
-                    }
                 }
             }
         }
