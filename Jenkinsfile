@@ -5,6 +5,7 @@ pipeline {
         registry = "jceleste/ngweb" 
 
         dockerImage = '' 
+		tag_version = "${env.BUILD_ID}"
     }
 
 
@@ -23,7 +24,7 @@ pipeline {
                 script {
                     
 					 
-					  sh 'docker push jceleste/ngweb:"${env.BUILD_ID}"'
+					  sh 'docker push jceleste/ngweb:$tag_version'
                     }
                 }
             }
@@ -32,9 +33,7 @@ pipeline {
 		
 		
 		stage ('Deploy Docker Image'){
-            environment {
-                tag_version = "${env.BUILD_ID}"
-            }
+          
             steps{
 		     	script {
 					sh 'sed -i "s/{{TAG}}/$tag_version/g" /home/ngweb-compose/docker-compose.yaml'
