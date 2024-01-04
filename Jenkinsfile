@@ -6,6 +6,8 @@ pipeline {
 
         dockerImage = '' 
 		tag_version = "${env.BUILD_ID}"
+		
+		tag_generic  =  '{{TAG}}'
     }
 
 
@@ -38,6 +40,8 @@ pipeline {
 		     	script {
 					sh 'sed -i "s/{{TAG}}/$tag_version/g" /home/ngweb-compose/docker-compose.yaml'
                     sh 'docker-compose start'
+					
+					sh 'sed -i "s/$tag_version/$tag_generic/g" /home/ngweb-compose/docker-compose.yaml'
 				}
 				
 			}
