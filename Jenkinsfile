@@ -43,18 +43,7 @@ pipeline {
            
         }
 		
-		stage ('End process'){
-          
-            steps{
-		     	script {
-				
-					
-					sh 'sed -i "s/$tag_version/$tag_generic/g" /home/ngweb-compose/docker-compose.yaml'
-				}
-				
-			}
-           
-        }
+		
     }
 
 }
