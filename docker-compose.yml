@@ -1,9 +1,38 @@
-version: "3"
+version: "3.1"
 services:
-    php:
-      build: .
-      ports:
-       - "80:80"
-       - "443:443"
-      volumes:
-       - ./xampp/htdocs/negocios:/var/www/html
+  ngwebsite:
+    image: jceleste/ngweb:latest
+    networks:
+      - mysql_server
+    ports:
+      - 8282:80
+    depends_on:
+      - db
+    links:
+      - db
+  db:
+    image: mysql:5.7
+    networks:
+      - mysql_server
+    command: --innodb_use_native_aio=0
+    restart: always
+    volumes:
+      - db_data:/var/lib/mysql
+    environment:
+      - MYSQL_ROOT_PASSWORD=Sj2fO3zt6m7P
+      - MYSQL_DATABASE=ngweb
+    ports:
+      - 3302:3306
+  phpmyadmin:
+    image: phpmyadmin
+    networks:
+      - mysql_server
+    restart: always
+    ports:
+      - 8283:80
+    environment:
+      - PMA_ARBITRARY=1
+volumes:
+  db_data:
+networks:
+  mysql_server:
