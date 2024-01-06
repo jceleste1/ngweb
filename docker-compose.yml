@@ -1,7 +1,7 @@
 version: "3.1"
 services:
   ngwebsite:
-    image: jceleste/ngweb:121
+    image: jceleste/ngweb:{{TAG}}
     networks:
       - mysql_server
     ports:
@@ -23,8 +23,17 @@ services:
       - MYSQL_DATABASE=ngweb
     ports:
       - 3302:3306
+  phpmyadmin:
+    image: phpmyadmin
+    networks:
+      - mysql_server
+    restart: always
+    ports:
+      - 8283:80
+    environment:
+      - PMA_ARBITRARY=1
 volumes:
   db_data:
 networks:
+  api_server:
   mysql_server:
-
