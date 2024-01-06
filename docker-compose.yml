@@ -1,7 +1,7 @@
 version: "3.1"
 services:
   ngwebsite:
-    image: jceleste/ngweb:{{TAG}}
+    image: jceleste/ngweb:latest
     networks:
       - mysql_server
     ports:
