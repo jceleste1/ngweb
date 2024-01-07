@@ -36,7 +36,7 @@ pipeline {
           
             steps{
 		     	script {
-				                    sh 'docker-compose stop'
+				                    sh 'docker-compose down'
                     sh 'docker-compose up -d'
 				}
 				
