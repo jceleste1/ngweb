@@ -36,7 +36,7 @@ pipeline {
           
             steps{
 		     	script {
-				                    sh 'docker-compose down'
+				                    sh 'docker rm ngweb_ngwebsite_1'
                     sh 'docker-compose up -d'
 				}
 				
