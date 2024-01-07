@@ -12,6 +12,7 @@ pipeline {
     stages {
          stage ('Build Docker Image'){
              steps{
+			 
                  script {
 				     dockerapp = docker.build("jceleste/ngweb:${env.BUILD_ID}", '-f ./Dockerfile ./ ')
 					 
