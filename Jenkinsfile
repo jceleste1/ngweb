@@ -36,7 +36,20 @@ pipeline {
           
             steps{
 		     	script {
-				              
+				
+					try {
+						sh 'docker stop ngweb_ngwebsite_1'
+					} catch (err) {
+						echo err.getMessage()
+						echo "docker stop."
+					}
+					try {
+						sh 'docker rm ngweb_ngwebsite_1'
+					} catch (err) {
+						echo err.getMessage()
+						echo "docker rm."
+					}          
+				               
                     sh 'docker-compose up -d'
 				}
 				
