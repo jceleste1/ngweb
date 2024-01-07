@@ -42,13 +42,13 @@ pipeline {
 						sh 'docker stop ngweb_ngwebsite_1'
 					} catch (err) {
 						echo err.getMessage()
-						echo "docker stop."
+						echo ">>>> docker stop."
 					}
 					try {
 						sh 'docker rm ngweb_ngwebsite_1'
 					} catch (err) {
 						echo err.getMessage()
-						echo "docker rm."
+						echo ">>>  docker rm."
 					}          
 				               
                     sh 'docker-compose up -d'
