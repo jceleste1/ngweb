@@ -47,7 +47,7 @@ function fMySQL_Connect($qry,$DB="",$sendMail=true){
 		echo "Error  " .mysqli_connect_error();
 	}
 
-  echo "v46 -->";
+  echo "v47 -->";
 	$result = mysqli_query($conn, $qry );
 
 	if( mysqli_connect_error() ){
