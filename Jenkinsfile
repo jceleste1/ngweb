@@ -32,9 +32,7 @@ pipeline {
         }
 		
 		
-		
 		stage ('Deploy Docker Image'){
-          
             steps{
 		     	script {
 				
@@ -42,14 +40,14 @@ pipeline {
 						sh 'docker stop ngweb_ngwebsite_1'
 					} catch (err) {
 						echo err.getMessage()
-						echo ">>>> docker stop."
+						echo ">>>> Error docker stop."
 					}
 					try {
 						sh 'docker rm ngweb_ngwebsite_1'
 						sh 'docker rmi -f jceleste/ngweb:latest'
 					} catch (err) {
 						echo err.getMessage()
-						echo ">>>  docker rm."
+						echo ">>> Erro  docker rm."
 					}          
 				               
                     sh 'docker-compose up -d'
