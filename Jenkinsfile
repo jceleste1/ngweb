@@ -46,6 +46,7 @@ pipeline {
 					}
 					try {
 						sh 'docker rm ngweb_ngwebsite_1'
+						sh 'docker rmi -f jceleste/ngweb:latest'
 					} catch (err) {
 						echo err.getMessage()
 						echo ">>>  docker rm."
