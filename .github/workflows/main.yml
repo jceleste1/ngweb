@@ -28,6 +28,7 @@ jobs:
             jceleste/ngweb:latest
   CD:
     runs-on: ubuntu-latest
+    needs: [CI]
     timeout-minutes: 5
     steps:
     - name: print out example job
