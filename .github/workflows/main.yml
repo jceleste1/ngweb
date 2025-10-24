@@ -27,7 +27,8 @@ jobs:
             jceleste/ngweb:${{github.run_number}}
             jceleste/ngweb:latest
   CD:
-    runs-on: CI
+    runs-on: ubuntu-latest
+    needs: [CI]
     timeout-minutes: 5
     steps:
     - name: print out example job
@@ -40,4 +41,3 @@ jobs:
         command_timeout: 30m
         script: | 
           echo "Nice Job!!!"
-  
