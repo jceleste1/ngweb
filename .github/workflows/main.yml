@@ -1,8 +1,7 @@
 name: CI-CD
 'on':
   push:
-    branches:
-      - main
+     branches: ["main"]
   workflow_dispatch: null
 env:
   ENV_WORKFLOW: Valor WORKFLOW
@@ -11,7 +10,7 @@ jobs:
     name: Run CI
     runs-on: ubuntu-latest
     steps:
-      - name: Obtendo o código
+      - name: Obtendo o codigo
         uses: actions/checkout@v4.1.5
       - name: Autenticando no Docker-Hub
         uses: docker/login-action@v3.1.0
