@@ -18,11 +18,10 @@ jobs:
         password: rjEAmIH4MO
         port: 22
         command_timeout: 30m
+        working-directory: ./ngweb-compose
         script: | 
           echo "Nice Job!!!"
           docker clear  
-          echo "Folder Deploy >>>> "
-          cd ngweb-compose/
           echo "docker pull >>>> "
           docker pull jceleste/ngweb:latest     
           echo "docker-compose >>>> "          
