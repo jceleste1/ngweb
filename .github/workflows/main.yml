@@ -6,11 +6,6 @@ name: CI-CD
 env:
   ENV_WORKFLOW: Valor WORKFLOW
 jobs:
-  CI:
-    name: Run CI
-    runs-on: ubuntu-latest
-    steps:
-      - name: Obtendo o codigo
   CD:
     runs-on: ubuntu-latest
     needs: [CI]
