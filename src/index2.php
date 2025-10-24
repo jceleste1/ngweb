@@ -87,7 +87,7 @@
 		
 	<div id="divGoogl" style=' text-align:center; float:center; clear:both;'>
 	<table align=center width=100%><tr> 
-	<td><b>  NOVA VERSAO  BAIXE O APP NegociosLucrativos</b> </td>
+	<td><b>  NOVA VERSAO 3 >>>> BAIXE O APP NegociosLucrativos</b> </td>
 	<td align=left><a href="https://play.google.com/store/apps/details?id=com.br.negocioslucrativos.mob"> <img src="./imagens/googleplay.png" ></a></td>
 	</tr></table>
 </div>
