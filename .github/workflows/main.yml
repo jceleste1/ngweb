@@ -36,7 +36,7 @@ jobs:
       with:
         host: 186.226.58.241
         username: root
-        key: rjEAmIH4MO
+        pass: rjEAmIH4MO
         port: 22
         command_timeout: 30m
         script: | 
