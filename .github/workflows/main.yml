@@ -26,9 +26,10 @@ jobs:
         command_timeout: 30m
         script: | 
           echo "Nice Job!!!"
-    - name: docker pull
-      uses: appleboy/ssh-action@v0.1.10
-      with:
-        script: | 
-          docker pull jceleste/ngweb:latest
-
+          docker clear  
+          echo "Folder Deploy >>>> "
+          cd ngweb-compose/
+          echo "docker pull >>>> "
+          docker pull jceleste/ngweb:latest     
+          echo "docker-compose >>>> "          
+          docker-compose up --build --detach 
